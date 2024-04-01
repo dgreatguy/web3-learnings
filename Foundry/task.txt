@@ -1,0 +1,12 @@
+create an erc721 marketplace that uses onchain orders coupled with vrs signatures to create and confirm orders.
+
+the marketplace should allow users to create erc721 orders for their erc721 tokens
+
+the order should have the following info:
+- order creator/token owner
+- erc721 token address, tokenID
+- price (using only ether as currency)
+- signature (seller must sign the previous data i.e hash of the token address, tokenId, price owner etc)
+- deadline, if the token isn't sold before the deadline, it cannot be bought again
+
+when the order is being fulfilled/executed by the buyer, the signature is being verified to be the owner's address among other checks
